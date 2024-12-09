@@ -12,7 +12,8 @@ body {
     font-family: 'Heebo', sans-serif;
 }
 
-header, footer {
+header,
+footer {
     padding: 0.5rem 2rem;
 }
 
@@ -91,7 +92,8 @@ main {
     margin-bottom: 15px;
 }
 
-.btn, .email-btn {
+.btn,
+.email-btn {
     display: inline-block;
     text-decoration: none;
     padding: 8px 16px;
@@ -111,7 +113,8 @@ main {
     color: white;
 }
 
-.btn:hover, .email-btn:hover {
+.btn:hover,
+.email-btn:hover {
     background-color: #0a5cb4;
 }
 
@@ -137,7 +140,8 @@ footer {
         text-align: center;
     }
 
-    .text-content, .image-content {
+    .text-content,
+    .image-content {
         flex: none;
         margin-left: 0;
     }
@@ -150,9 +154,3 @@ footer {
         justify-content: center;
     }
 }
-
-
-
-
-
-
