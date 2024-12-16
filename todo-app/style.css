@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-app {
+    max-width: 900px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+.todo-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.todo-input::placeholder {
+    font-size: 1rem;
+}
+
+.todo-input[aria-label] {
+    display: none;
+}
+
+.todo-button {
+    background-color: #0078d7;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.todo-button:hover {
+    background-color: #005bb5;
+}
+
+.todo-button[aria-label] {
+    outline: none;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.todo-item input[type="checkbox"][aria-label] {
+    display: none;
+}
+
+.todo-item span {
+    font-size: 1rem;
+}
+
+.todo-item.completed span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.todo-item button {
+    background-color: #d9534f;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.todo-item button:hover {
+    background-color: #c9302c;
+}
+
+.todo-item button[aria-label] {
+    outline: none;
+}
+
+.todo-info {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 20px;
+}
+
+.todo-input, .todo-button, .todo-item input[type="checkbox"], .todo-item button {
+    outline: none;
+}
+
+.todo-input[aria-label]::placeholder,
+.todo-button[aria-label] {
+    display: none;
+}
+
+.todo-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #888888;
+}
