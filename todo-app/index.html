@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do-App</title>
+    <title>Meine To-Do-Liste</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Meine To-Do-Liste</h1>
-    <div class="todo-app">
-        <form class="todo-form" action="">
-            <input class="todo-input" type="text" placeholder="Neue Aufgabe hinzufügen" required>
-            <button class="todo-button" type="submit">Hinzufügen</button>
-        </form>
-        <ul class="todo-list">
-        </ul>
-        <div class="todo-info">
-            <span>Offene Aufgaben: <span id="task-count">0</span></span>
+    <div class="container">
+        <h1>Meine To-Do-Liste</h1>
+        <div class="todo-container">
+            <form class="todo-form">
+                <input type="text" class="todo-input" placeholder="Neue Aufgabe hinzufügen">
+                <button type="submit" class="add-button">Hinzufügen</button>
+            </form>
+            <ul class="todo-list"></ul>
+            <p class="task-counter">Offene Aufgaben: <span id="task-count">0</span></p>
         </div>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>
-
