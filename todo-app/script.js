@@ -107,3 +107,8 @@ function updateTaskCount() {
     const openTasks = todos.filter((todo) => !todo.completed).length;
     taskCount.textContent = openTasks;
 }
+
+
+// loads tasks when starting the app
+loadTodos();
+renderTodos();
