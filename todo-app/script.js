@@ -7,10 +7,21 @@ const taskCount = document.getElementById('task-count');
 // array for saving tasks
 let todos = [];
 
-// function for saving taks in localstorage (JSON)
+// function for saving tasks in localstorage (JSON)
 function saveTodos() {
     const todosString = JSON.stringify(todos);
     localStorage.setItem("todos", todosString);
+}
+
+// function for loading tasks fron localstorage
+function loadTodos() {
+    const todosString = localStorage.getItem("todos");
+    if (todosString) {
+        todos = JSON.parse(todosString);
+    
+    } else {
+        todos = []; // set todos to empty array if no data is found
+    }
 }
 
 // event listener for the form
