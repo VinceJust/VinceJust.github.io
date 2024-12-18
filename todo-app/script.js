@@ -43,6 +43,8 @@ form.addEventListener('submit', (event) => {
 
     // add the new task to the array
     todos.push(newTodo);
+    saveTodos(); // saves current tasks
+    renderTodos();
 
     // clear the input field
     input.value = '';
@@ -69,6 +71,7 @@ function renderTodos() {
         checkbox.checked = todo.completed;
         checkbox.addEventListener('change', () => {
             todo.completed = checkbox.checked; // update the status
+            saveTodos(); // saves current tasks
             renderTodos();
         });
 
@@ -82,6 +85,7 @@ function renderTodos() {
         deleteButton.addEventListener('click', () => {
             // delete the task based on its id
             todos = todos.filter((t) => t.id !== todo.id);
+            saveTodos(); // saves current tasks
             renderTodos();
         });
 
@@ -103,4 +107,3 @@ function updateTaskCount() {
     const openTasks = todos.filter((todo) => !todo.completed).length;
     taskCount.textContent = openTasks;
 }
-
